@@ -17,7 +17,7 @@ namespace ApiGateway.SqlServer.Controllers
         }
 
         [HttpGet("{nombre}")]
-        public async Task<ActionResult<string>> ObtenerNombre(string nombre)
+        public async Task<ActionResult<List<Usuario>>> ObtenerNombre(string nombre)
         {
             var usuarios = await _context.Usuarios.Where(u => u.Name.Contains(nombre)).ToListAsync();
 
