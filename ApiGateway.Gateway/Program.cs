@@ -7,6 +7,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHttpClient("SqlServer", conf =>
+    conf.BaseAddress = new Uri(builder.Configuration["Services:SqlServer"]));
+
+builder.Services.AddHttpClient("PostgreSql", conf =>
+    conf.BaseAddress = new Uri(builder.Configuration["Services:PostgreSql"]));
+
+builder.Services.AddHttpClient("MongoDB", conf =>
+    conf.BaseAddress = new Uri(builder.Configuration["Services:MongoDB"]));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
