@@ -1,3 +1,5 @@
+using ApiGateway.Gateway.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,13 +9,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpClient("SqlServer", conf =>
+builder.Services.AddHttpClient(ApiClients.SqlServer.ToString(), conf =>
     conf.BaseAddress = new Uri(builder.Configuration["Services:SqlServer"]));
 
-builder.Services.AddHttpClient("PostgreSql", conf =>
+builder.Services.AddHttpClient(ApiClients.PostgreSql.ToString(), conf =>
     conf.BaseAddress = new Uri(builder.Configuration["Services:PostgreSql"]));
 
-builder.Services.AddHttpClient("MongoDB", conf =>
+builder.Services.AddHttpClient(ApiClients.MongoDB.ToString(), conf =>
     conf.BaseAddress = new Uri(builder.Configuration["Services:MongoDB"]));
 
 var app = builder.Build();
