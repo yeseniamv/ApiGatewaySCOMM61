@@ -2,8 +2,8 @@
 {
     public enum ApiClients
     {
-        SqlServer,
-        PostgreSql,
-        MongoDB
+        SqlServer, //0
+        PostgreSql, //1
+        MongoDB //2
     }
 }
