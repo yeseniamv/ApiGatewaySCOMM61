@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EfdA5PlaNkwkUUWJU0qSKywBMvHwAMTqx+UNTOrNzLo=",
+  "Source": "ApiGateway.MongoDb",
+  "BasePath": "_content/ApiGateway.MongoDb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
