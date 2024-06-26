@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IkuRgbY+aIH2zfwv1GvV+kdcQyHDkiLNifmzo9EjMV8=",
+  "Source": "ApiGateway.SqlServer",
+  "BasePath": "_content/ApiGateway.SqlServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

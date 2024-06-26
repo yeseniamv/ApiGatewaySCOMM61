@@ -9,4 +9,5 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Venta> Ventas { get; set; }
 }
