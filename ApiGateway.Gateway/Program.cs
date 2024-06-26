@@ -12,9 +12,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient(ApiClients.SqlServer.ToString(), conf =>
     conf.BaseAddress = new Uri(builder.Configuration["Services:SqlServer"]));
 
-builder.Services.AddHttpClient(ApiClients.PostgreSql.ToString(), conf =>
-    conf.BaseAddress = new Uri(builder.Configuration["Services:PostgreSql"]));
-
 builder.Services.AddHttpClient(ApiClients.MongoDB.ToString(), conf =>
     conf.BaseAddress = new Uri(builder.Configuration["Services:MongoDB"]));
 

@@ -52,6 +52,13 @@ namespace ApiGateway.MongoDb
             _collection.InsertMany(juegos);
         }
 
+        public async Task<Juego> ObtenerPorId(string Id)
+        {
+            return await _collection
+                .Find(a => a.Id == Id)
+                .FirstOrDefaultAsync<Juego>();
+        }
+
         public Juego ConsultarPorTitulo(string titulo)
         {
             return _collection

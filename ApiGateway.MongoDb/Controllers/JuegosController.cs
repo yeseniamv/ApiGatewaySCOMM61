@@ -19,6 +19,12 @@ namespace ApiGateway.MongoDb.Controllers
             return await _juego.ObtenerJuegos();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Juego>> ObtenerPorId(string id)
+        {
+            return await _juego.ObtenerPorId(id);
+        }
+
         [HttpPost]
         public async Task<ActionResult<Juego>> Agregar([FromBody]Juego juego)
         {
